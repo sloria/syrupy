@@ -67,6 +67,12 @@ def get_target_url() -> str:
     return all_results_url + (f"/{commit_sha}" if commit_sha else "")
 
 
+def make_comment(github: "Github", comment: str) -> None:
+    """
+    Create or update comment on the pull request for the branch if one exists
+    """
+
+
 def report_pending(github: Optional["Github"] = None) -> None:
     """
     Set the commit benchmark status to pending
